@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
@@ -11,5 +12,9 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  login(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
+    console.log(form);
+  }
 }
